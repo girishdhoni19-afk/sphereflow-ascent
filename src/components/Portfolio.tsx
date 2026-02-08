@@ -1,28 +1,31 @@
 import AnimatedSection from "./AnimatedSection";
 import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
-import portfolio1 from "@/assets/portfolio-1.jpg";
-import portfolio2 from "@/assets/portfolio-2.jpg";
-import portfolio3 from "@/assets/portfolio-3.jpg";
+import portfolioSyncup from "@/assets/portfolio-syncup.png";
+import portfolioLaunchlist from "@/assets/portfolio-launchlist.png";
+import portfolioTaskflow from "@/assets/portfolio-taskflow.png";
 
 const projects = [
   {
-    title: "Aether Analytics",
-    description: "A real-time analytics dashboard for SaaS businesses.",
-    image: portfolio1,
-    link: "#",
+    title: "SyncUp",
+    description:
+      "Turn meeting chaos into clear action. AI-powered meeting summaries with automatic action items and seamless team alignment—built to make every meeting actually productive.",
+    image: portfolioSyncup,
+    link: "https://syncupflow.lovable.app",
   },
   {
-    title: "Meridian Commerce",
-    description: "High-converting e-commerce experience for a luxury brand.",
-    image: portfolio2,
-    link: "#",
+    title: "LaunchList",
+    description:
+      "Ship your waitlist in 30 seconds. Beautiful landing pages, email collection, and launch countdown—everything indie founders need to build hype before launch day.",
+    image: portfolioLaunchlist,
+    link: "https://launchlistflow.lovable.app",
   },
   {
-    title: "Vertex Platform",
-    description: "Internal workflow tool serving 500+ enterprise users.",
-    image: portfolio3,
-    link: "#",
+    title: "TaskFlow",
+    description:
+      "Simple task management that teams actually use. Clean Kanban boards with drag-and-drop functionality, built for teams who need clarity without the complexity of enterprise tools.",
+    image: portfolioTaskflow,
+    link: "https://taskflow19.lovable.app",
   },
 ];
 
@@ -43,6 +46,8 @@ const Portfolio = () => {
           <motion.a
             key={project.title}
             href={project.link}
+            target="_blank"
+            rel="noopener noreferrer"
             initial={{ opacity: 0, y: 30 }}
             animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
             transition={{
