@@ -36,7 +36,7 @@ const Portfolio = () => {
   return (
     <section className="px-6 py-32 md:px-16">
       <AnimatedSection className="mb-16">
-        <h2 className="text-3xl font-semibold tracking-tight text-foreground md:text-4xl">
+        <h2 className="text-3xl font-semibold tracking-widest text-foreground md:text-4xl">
           Selected Work
         </h2>
       </AnimatedSection>
