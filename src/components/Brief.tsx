@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import AnimatedSection from "./AnimatedSection";
+import MagneticButton from "./MagneticButton";
 import { supabase } from "@/integrations/supabase/client";
 import { Loader2 } from "lucide-react";
 
@@ -18,14 +19,12 @@ const Brief = () => {
     setError("");
 
     try {
-      // Insert into database
       const { error: dbError } = await supabase
         .from("briefs")
         .insert({ name, email, vision });
 
       if (dbError) throw dbError;
 
-      // Send email notification
       await supabase.functions.invoke("send-brief-email", {
         body: { name, email, vision },
       });
@@ -42,7 +41,7 @@ const Brief = () => {
   return (
     <section id="brief" className="px-6 py-32 md:px-16">
       <AnimatedSection>
-        <div className="mx-auto max-w-2xl rounded-3xl border border-subtle bg-card-glass p-10 md:p-14">
+        <div className="shimmer-hover mx-auto max-w-2xl rounded-3xl border border-subtle bg-card-glass p-10 md:p-14">
           <AnimatePresence mode="wait">
             {isSuccess ? (
               <motion.div
@@ -57,7 +56,7 @@ const Brief = () => {
                     <polyline points="20 6 9 17 4 12" />
                   </svg>
                 </div>
-                <h3 className="mb-3 text-2xl font-semibold text-foreground">
+                <h3 className="mb-3 text-2xl font-semibold tracking-wider text-foreground">
                   Your vision is in our inbox.
                 </h3>
                 <p className="text-muted-foreground">
@@ -70,7 +69,7 @@ const Brief = () => {
                 exit={{ opacity: 0, scale: 0.95 }}
                 transition={{ duration: 0.3 }}
               >
-                <h2 className="mb-2 text-3xl font-semibold tracking-tight text-foreground md:text-4xl">
+                <h2 className="mb-2 text-3xl font-semibold tracking-widest text-foreground md:text-4xl">
                   Submit a Brief
                 </h2>
                 <p className="mb-10 text-muted-foreground">
@@ -110,10 +109,10 @@ const Brief = () => {
                     <p className="text-sm text-destructive">{error}</p>
                   )}
 
-                  <button
+                  <MagneticButton
                     type="submit"
                     disabled={isSubmitting}
-                    className="mt-2 flex items-center justify-center gap-2 rounded-full bg-foreground px-8 py-3.5 text-sm font-medium text-background transition-opacity hover:opacity-80 disabled:opacity-60"
+                    className="mt-2 flex items-center justify-center gap-2 rounded-full bg-foreground px-8 py-3.5 text-sm font-medium tracking-wider text-background transition-opacity hover:opacity-80 disabled:opacity-60"
                   >
                     {isSubmitting ? (
                       <>
@@ -123,7 +122,7 @@ const Brief = () => {
                     ) : (
                       "Submit"
                     )}
-                  </button>
+                  </MagneticButton>
                 </form>
               </motion.div>
             )}
