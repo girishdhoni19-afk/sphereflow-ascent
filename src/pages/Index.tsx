@@ -13,6 +13,20 @@ const Index = () => {
       <div className="relative z-10">
         <Navbar />
         <Hero />
+        <section className="px-6 md:px-16">
+          <video
+            autoPlay
+            muted
+            playsInline
+            className="w-full rounded-2xl"
+            aria-hidden="true"
+          >
+            <source
+              src="https://res.cloudinary.com/dookkg2ys/video/upload/v1770610888/1000038328_1_r8iiyi.mp4"
+              type="video/mp4"
+            />
+          </video>
+        </section>
         <Services />
         <WhySphereFlow />
         <Portfolio />
