@@ -12,6 +12,7 @@ const Brief = () => {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSuccess, setIsSuccess] = useState(false);
   const [error, setError] = useState("");
+  const [website, setWebsite] = useState(""); // honeypot
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -26,7 +27,7 @@ const Brief = () => {
       if (dbError) throw dbError;
 
       await supabase.functions.invoke("send-brief-email", {
-        body: { name, email, vision },
+        body: { name, email, vision, website },
       });
 
       setIsSuccess(true);
@@ -77,6 +78,17 @@ const Brief = () => {
                 </p>
 
                 <form onSubmit={handleSubmit} className="flex flex-col gap-6">
+                  {/* Honeypot field - hidden from real users */}
+                  <input
+                    type="text"
+                    name="website"
+                    value={website}
+                    onChange={(e) => setWebsite(e.target.value)}
+                    className="absolute -left-[9999px] opacity-0 h-0 w-0"
+                    tabIndex={-1}
+                    autoComplete="off"
+                    aria-hidden="true"
+                  />
                   <input
                     type="text"
                     placeholder="Name"
