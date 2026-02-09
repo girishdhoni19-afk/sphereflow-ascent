@@ -1,6 +1,7 @@
 import Navbar from "@/components/Navbar";
 import Hero from "@/components/Hero";
 import Services from "@/components/Services";
+import WhySphereFlow from "@/components/WhySphereFlow";
 import Portfolio from "@/components/Portfolio";
 import Brief from "@/components/Brief";
 import CursorGlow from "@/components/CursorGlow";
@@ -13,6 +14,7 @@ const Index = () => {
         <Navbar />
         <Hero />
         <Services />
+        <WhySphereFlow />
         <Portfolio />
         <Brief />
         <footer className="border-t border-subtle px-6 py-8 md:px-16">

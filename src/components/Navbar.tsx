@@ -16,7 +16,7 @@ const Navbar = () => {
         href="#brief"
         className="rounded-full border border-subtle bg-secondary px-5 py-2 text-sm font-medium tracking-wider text-foreground transition-colors hover:bg-accent"
       >
-        Get in Touch
+        Start a Project
       </MagneticButton>
     </motion.nav>
   );

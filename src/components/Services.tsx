@@ -4,16 +4,16 @@ import { useRef } from "react";
 
 const services = [
   {
-    title: "Micro SaaS MVPs",
-    description: "Turning ideas into functional products in record time.",
+    title: "Micro-SaaS MVPs",
+    description: "Design and development of focused MVPs built to validate ideas and reach market efficiently.",
   },
   {
-    title: "Conversion Focused",
-    description: "High-end websites designed to turn visitors into customers.",
+    title: "Conversion-Focused Websites",
+    description: "High-performance marketing websites designed to convert attention into revenue.",
   },
   {
-    title: "Internal Tools",
-    description: "Custom dashboards and workflow tools for your team.",
+    title: "Internal Tools & Dashboards",
+    description: "Purpose-built internal tools that streamline operations and support scalable teams.",
   },
 ];
 
