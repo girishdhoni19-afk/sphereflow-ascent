@@ -13,19 +13,23 @@ const Index = () => {
       <div className="relative z-10">
         <Navbar />
         <Hero />
-        <section className="px-6 md:px-16">
-          <video
-            autoPlay
-            muted
-            playsInline
-            className="w-full rounded-2xl"
-            aria-hidden="true"
-          >
-            <source
-              src="https://res.cloudinary.com/dookkg2ys/video/upload/v1770610888/1000038328_1_r8iiyi.mp4"
-              type="video/mp4"
-            />
-          </video>
+        <section className="flex justify-center px-6 py-16 md:px-16 md:py-24">
+          <div className="w-full max-w-[960px]">
+            <div className="relative w-full overflow-hidden rounded-2xl" style={{ paddingBottom: '56.25%' }}>
+              <video
+                autoPlay
+                muted
+                playsInline
+                className="absolute inset-0 h-full w-full object-cover"
+                aria-hidden="true"
+              >
+                <source
+                  src="https://res.cloudinary.com/dookkg2ys/video/upload/v1770610888/1000038328_1_r8iiyi.mp4"
+                  type="video/mp4"
+                />
+              </video>
+            </div>
+          </div>
         </section>
         <Services />
         <WhySphereFlow />
