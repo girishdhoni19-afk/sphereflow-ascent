@@ -20,7 +20,7 @@ const Index = () => {
                 autoPlay
                 muted
                 playsInline
-                className="absolute inset-0 h-full w-full object-cover"
+                className="absolute inset-0 h-full w-full object-contain"
                 aria-hidden="true"
               >
                 <source
