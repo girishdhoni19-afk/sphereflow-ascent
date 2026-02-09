@@ -28,7 +28,16 @@ serve(async (req: Request) => {
       throw new Error("RESEND_API_KEY is not configured");
     }
 
-    const { name, email, vision } = await req.json();
+    const { name, email, vision, website } = await req.json();
+
+    // Honeypot: if 'website' field is filled, it's a bot
+    if (website) {
+      // Return success to not tip off the bot
+      return new Response(JSON.stringify({ success: true }), {
+        status: 200,
+        headers: { "Content-Type": "application/json", ...corsHeaders },
+      });
+    }
 
     if (!name || !email || !vision) {
       return new Response(JSON.stringify({ error: "Missing required fields" }), {
