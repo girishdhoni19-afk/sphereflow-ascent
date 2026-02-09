@@ -13,22 +13,21 @@ const Index = () => {
       <div className="relative z-10">
         <Navbar />
         <Hero />
-        <section className="flex justify-center px-6 py-16 md:px-16 md:py-24">
-          <div className="w-full max-w-[960px]">
-            <div className="relative w-full overflow-hidden rounded-2xl" style={{ paddingBottom: '56.25%' }}>
-              <video
-                autoPlay
-                muted
-                playsInline
-                className="absolute inset-0 h-full w-full object-contain"
-                aria-hidden="true"
-              >
-                <source
-                  src="https://res.cloudinary.com/dookkg2ys/video/upload/v1770610888/1000038328_1_r8iiyi.mp4"
-                  type="video/mp4"
-                />
-              </video>
-            </div>
+        <section className="flex justify-center px-6 py-12 md:px-16 md:py-16">
+          <div className="w-full max-w-[860px]">
+            <video
+              autoPlay
+              muted
+              playsInline
+              className="mx-auto w-full rounded-2xl object-contain"
+              style={{ maxHeight: '450px' }}
+              aria-hidden="true"
+            >
+              <source
+                src="https://res.cloudinary.com/dookkg2ys/video/upload/v1770610888/1000038328_1_r8iiyi.mp4"
+                type="video/mp4"
+              />
+            </video>
           </div>
         </section>
         <Services />
