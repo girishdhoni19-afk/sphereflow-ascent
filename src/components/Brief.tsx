@@ -73,8 +73,14 @@ const Brief = () => {
                 <h2 className="mb-2 text-3xl font-semibold tracking-widest text-foreground md:text-4xl">
                   Submit a Brief
                 </h2>
+                <div className="mb-6 rounded-xl border border-subtle bg-accent/10 p-5">
+                  <h4 className="mb-1 text-sm font-medium tracking-wider text-foreground">Pricing & Engagement</h4>
+                  <p className="text-sm leading-relaxed text-muted-foreground">
+                    Projects typically start at $3,000–$5,000 for focused MVPs and scale based on scope and complexity. We take on a limited number of projects to ensure quality and attention.
+                  </p>
+                </div>
                 <p className="mb-10 text-muted-foreground">
-                  Tell us about your project and we'll get back to you within 24 hours.
+                  Tell us about your project or the challenge you're solving. We'll respond within 24 hours with clear next steps.
                 </p>
 
                 <form onSubmit={handleSubmit} className="flex flex-col gap-6">

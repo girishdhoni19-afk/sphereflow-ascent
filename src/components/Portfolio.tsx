@@ -9,14 +9,14 @@ const projects = [
   {
     title: "SyncUp",
     description:
-      "Turn meeting chaos into clear action. AI-powered meeting summaries with automatic action items and seamless team alignment—built to make every meeting actually productive.",
+      "AI-powered meeting summaries and action items designed to turn conversations into clear, actionable outcomes.",
     image: portfolioSyncup,
     link: "https://syncupflow.lovable.app",
   },
   {
     title: "LaunchList",
     description:
-      "Ship your waitlist in 30 seconds. Beautiful landing pages, email collection, and launch countdown—everything indie founders need to build hype before launch day.",
+      "A streamlined waitlist platform built to help founders validate demand and launch with momentum.",
     image: portfolioLaunchlist,
     link: "https://launchlistflow.lovable.app",
   },
