@@ -74,10 +74,12 @@ const Brief = () => {
                   Submit a Brief
                 </h2>
                 <div className="mb-6 rounded-xl border border-subtle bg-accent/10 p-5">
-                  <h4 className="mb-1 text-sm font-medium tracking-wider text-foreground">Pricing & Engagement</h4>
-                  <p className="text-sm leading-relaxed text-muted-foreground">
-                    Projects typically start at $3,000–$5,000 for focused MVPs and scale based on scope and complexity. We take on a limited number of projects to ensure quality and attention.
-                  </p>
+                  <h4 className="mb-2 text-sm font-medium tracking-wider text-foreground">Pricing & Engagement</h4>
+                  <ul className="space-y-1.5 text-sm leading-relaxed text-muted-foreground">
+                    <li>Focused MVPs start at <span className="text-foreground">$3,000</span>. Most engagements fall between $3,000–$5,000 depending on scope.</li>
+                    <li>Landing pages and marketing websites typically start at <span className="text-foreground">$2,000</span>.</li>
+                    <li>We take on a limited number of projects to ensure quality and attention.</li>
+                  </ul>
                 </div>
                 <p className="mb-10 text-muted-foreground">
                   Tell us about your project or the challenge you're solving. We'll respond within 24 hours with clear next steps.

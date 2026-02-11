@@ -3,10 +3,22 @@ import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
 
 const reasons = [
-  "Senior-level execution with minimal overhead",
-  "Clear communication and founder-aligned decisions",
-  "Clean, maintainable codebases built to scale",
-  "Products designed for real users and real outcomes",
+  {
+    title: "We don't build everything. We build the right thing.",
+    body: "Most MVPs fail because they try to do too much. We force focus before a single feature is built.",
+  },
+  {
+    title: "Clarity before code.",
+    body: "If your idea is messy, we structure it. If it's bloated, we cut it. If it's vague, we define it.",
+  },
+  {
+    title: "MVPs that actually launch.",
+    body: "Real, usable products built to validate fast — not over-engineered prototypes.",
+  },
+  {
+    title: "No meeting loops. No agency overhead.",
+    body: "Direct communication. Clear decisions. Structured execution.",
+  },
 ];
 
 const WhySphereFlow = () => {
@@ -24,7 +36,7 @@ const WhySphereFlow = () => {
       <ul ref={ref} className="grid gap-4 md:grid-cols-2">
         {reasons.map((reason, i) => (
           <motion.li
-            key={reason}
+            key={reason.title}
             initial={{ opacity: 0, y: 20 }}
             animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
             transition={{
@@ -33,9 +45,14 @@ const WhySphereFlow = () => {
               stiffness: 100,
               delay: i * 0.12,
             }}
-            className="shimmer-hover rounded-2xl border border-subtle bg-card-glass p-6 text-sm leading-relaxed tracking-wide text-muted-foreground"
+            className="shimmer-hover rounded-2xl border border-subtle bg-card-glass p-6"
           >
-            {reason}
+            <h3 className="mb-2 text-sm font-medium tracking-wide text-foreground">
+              {reason.title}
+            </h3>
+            <p className="text-sm leading-relaxed text-muted-foreground">
+              {reason.body}
+            </p>
           </motion.li>
         ))}
       </ul>
