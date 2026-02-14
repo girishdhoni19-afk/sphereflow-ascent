@@ -76,8 +76,9 @@ const Brief = () => {
                 <div className="mb-6 rounded-xl border border-subtle bg-accent/10 p-5">
                   <h4 className="mb-2 text-sm font-medium tracking-wider text-foreground">Pricing & Engagement</h4>
                   <ul className="space-y-1.5 text-sm leading-relaxed text-muted-foreground">
-                    <li>Focused MVPs start at <span className="text-foreground">$3,000</span>. Most engagements fall between $3,000–$5,000 depending on scope.</li>
-                    <li>Landing pages and marketing websites typically start at <span className="text-foreground">$2,000</span>.</li>
+                    <li>Focused MVPs start at <span className="text-foreground">$1,500</span>. Most engagements fall between $1,500–$2,000 depending on scope.</li>
+                    <li>Landing pages and marketing websites typically start at <span className="text-foreground">$800</span>.</li>
+                    <li><span className="text-foreground">Custom Internal Tools & Dashboards</span> — Custom scoped. Built based on workflow complexity and automation requirements.</li>
                     <li>We take on a limited number of projects to ensure quality and attention.</li>
                   </ul>
                 </div>
