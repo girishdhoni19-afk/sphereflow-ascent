@@ -24,7 +24,7 @@ const Index = () => {
               aria-hidden="true"
             >
               <source
-                src="https://res.cloudinary.com/dookkg2ys/video/upload/v1770610888/1000038328_1_r8iiyi.mp4"
+                src="https://res.cloudinary.com/dookkg2ys/video/upload/v1771076609/InShot_20260214_190555009_akkua0.mp4"
                 type="video/mp4"
               />
             </video>
